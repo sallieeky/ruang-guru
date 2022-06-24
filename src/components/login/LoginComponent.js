@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CardBodyContent, Content, Title } from "./LoginStyled";
+import { Link } from "react-router-dom";
 const imgLogo = require("../../assets/images/login_logo.png");
 const LoginComponent = () => {
   const [email, setEmail] = useState("");
@@ -63,8 +64,15 @@ const LoginComponent = () => {
                         onClick={clickHandler}
                         style={{ backgroundColor: "#4a85a9" }}
                       >
-                        Submit
+                        Login
                       </button>
+                      <Link
+                        to="/register"
+                        className="text-center d-block mt-3"
+                        style={{ textDecoration: "none" }}
+                      >
+                        Belum memiliki akun?
+                      </Link>
                     </form>
                   </div>
                 </CardBodyContent>

@@ -12,8 +12,9 @@ export const CardBodyContent = styled.div`
   margin: 24px;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h5`
   font-weight: 500;
   color: #4a85a9;
-  margin: 16px 0;
+  width: 100%;
+  margin: 0 16px;
 `;
