@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CardBodyContent, Content, Title } from "./LoginStyled";
 import { Link } from "react-router-dom";
 const imgLogo = require("../../assets/images/login_logo.png");
 const LoginComponent = () => {
-  const [email, setEmail] = useState("");
+  useEffect(() => {
+    document.title = "Login Page";
+  }, []);
+
+  const [nisn, setNisn] = useState("");
   const [password, setPassword] = useState("");
 
-  const emailChange = (value) => {
-    setEmail(value);
+  const nisnChange = (value) => {
+    setNisn(value);
   };
   const passwordChange = (value) => {
     setPassword(value);
@@ -15,8 +19,6 @@ const LoginComponent = () => {
 
   const clickHandler = (e) => {
     e.preventDefault();
-    console.log("Email : " + email);
-    console.log("Password : " + password);
   };
 
   return (
@@ -37,13 +39,13 @@ const LoginComponent = () => {
                   <div>
                     <form>
                       <div className="form-group my-3">
-                        <label>Email address</label>
+                        <label>NISN</label>
                         <input
-                          value={email}
-                          placeholder="Email Address"
-                          type={"email"}
+                          value={nisn}
+                          placeholder="NISN"
+                          type={"text"}
                           className="form-control"
-                          onChange={(value) => emailChange(value.target.value)}
+                          onChange={(value) => nisnChange(value.target.value)}
                         />
                       </div>
                       <div className="form-group my-3">
