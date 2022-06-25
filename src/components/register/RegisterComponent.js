@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Content, Title } from "./RegisterStyled";
 import { Link } from "react-router-dom";
+import { FaChevronRight } from "react-icons/fa";
 const imgLogo = require("../../assets/images/login_logo.png");
 
 const RegisterComponent = () => {
@@ -90,7 +91,7 @@ const RegisterComponent = () => {
                         </Link>
                       </p>
                       <button className="btn btn-primary w-25">
-                        Selanjutnya
+                        Selanjutnya <FaChevronRight />
                       </button>
                     </div>
                   </form>

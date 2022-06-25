@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "../dashboard-components/Header";
-
 import { FaRegCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -25,7 +23,10 @@ function HomeComponent() {
               <p className="text-secondary">Aplikasi</p>
               <div className="col-md-3">
                 <div className="card">
-                  <Link to="/login" className="text-decoration-none text-dark">
+                  <Link
+                    to="/verifikasi-data"
+                    className="text-decoration-none text-dark"
+                  >
                     <div className="card-body">
                       <div className="d-flex">
                         <FaRegCheckCircle size={50} />
